@@ -8,9 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController 
 
 public class RootController {
-    @RequestMapping("/")
-    public String index() {
-        return "Spring Boot Sample!";
-    }
     
+
+
+@RequestMapping("/")
+public String RootPage() {
+    return "RootPage";
+}
+
 }
