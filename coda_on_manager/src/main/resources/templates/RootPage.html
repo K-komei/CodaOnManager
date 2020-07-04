@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html class = "h-100">
+<html class = "h-100"  xmlns:th="http://www.thymeleaf.org">
 <head>
-    
-    <link th:href="@{/css/bootstrap.css}" href="../static/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link th:href="@{/css/origin.css}" href="../static/css/origin.css" rel="stylesheet" type="text/css">
-    <link th:href="@{/css/jquery-linedtextarea.css}" href="../static/css/jquery-linedtextarea.css" rel="stylesheet" type="text/css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
-
+    <link th:href="@{/css/bootstrap.css}" href="../static/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/jquery-linedtextarea.css}" href="../static/css/jquery-linedtextarea.css" rel="stylesheet" type="text/css">  
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
     <title>StartUpMenu</title>
 </head>
-<body class = "h-100" style="background-color: black;">
+<body class = "h-100" style="background-color: rgba(15, 25, 30);">
     <div class = "container h-100">
         <div class = "row">
             <div class ="col-md-12 bg-secondary">
@@ -18,7 +16,6 @@
             </div>
         </div>
             <div class = "row">
-
             <div class ="col-md-2 bg-secondary">
                 <input type="button" value="File" class = "w-100">
             </div>
@@ -35,18 +32,12 @@
 
         <div class = "row">
             <div class="col-md-12">
-        
             <textarea class="lined" rows="30" cols="20" id ="code_wirite"></textarea>
-        <form action ="/Result" method="post">
-            <button type="submit">Test</button>
-        </form>
             </div>
         </div>
         <div class = "row" style="color:aliceblue">
             <div class="col-md-12">
-            
-            デバックアリア
-        </div>
+            </div>
 
         </div>
     
@@ -61,11 +52,8 @@
     });
     </script>
 
-
-
 <script type="text/javascript" src="../static/js/Editor.js" th:src="@{/js/Editor.js}"></script>
 <script type="text/javascript" src="../static/js/jquery-linedtextarea.js" th:src="@{/js/jquery-linedtextarea.js}"></script>
 <script type="text/javascript" src="../static/js/bootstrap.js" th:src="@{/js/jquery-linedtextarea.js}"></script>
 
-
-</html> 
+</html>

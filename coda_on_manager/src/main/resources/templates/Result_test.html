@@ -1,22 +1,56 @@
 <!DOCTYPE html>
-<html class = "h-100">
+<html class = "h-100"  xmlns:th="http://www.thymeleaf.org">
 <head>
-    
+    <link th:href="@{/css/origin.css}" href="../static/css/origin.css" rel="stylesheet" type="text/css">
     <link th:href="@{/css/bootstrap.css}" href="../static/css/bootstrap.css" rel="stylesheet" type="text/css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <title>StartUpMenu</title>
+    <link th:href="@{/css/jquery-linedtextarea.css}" href="../static/css/jquery-linedtextarea.css" rel="stylesheet" type="text/css">
+  
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>SignUp -サインアップ-</title>
 </head>
-<body class = "h-100" style="background-color: black;">
-
-    <div class ="row">
-        <div class ="col-sm-12">
-            <h1>ここにテキストを入れたい</h1>
+<body class = "h-100" style="background-color: rgba(48, 48, 50);">
+<div class ="container h-100" style="border: solid 1px whitesmoke; background-color:darkgrey; opacity:0.7">
+    <div class ="row spacezero h-100" id = "Hello">
+        <div class ="col-sm-12 spacezero" style="height: 60%;">
+            <img class ="spacezero"th:src="@{img/facebook_cover_photo_2.jpg}"width="100%"height="100%">
         </div>
-    </div>
+        <div class ="col-sm-12 spacezero" style="height: 30%;">
+            <h1>Write your Ideas...</h1>
+            <p>"Let's do it for now."<br>
+               This tool is for people with such aspirations.You can start from anywhere in your browser.<br>
+               Press the button below to start creating your idea.</p>  
+        <div>
+    </div>      
+        </div>
+        <div class ="col-sm-12" style="text-align:center;height: 10%;">
+            <input type="button" value="Coding!" onclick="hideform('open');">
+        </div>
+        </div>
+    <div class ="row spacezero h-100" id = "Sign-overlay">
+        <div class = "col-sm-12" id = "Sign">
+            <div class = row>
+                <form action ="/RootPage" method="post">
+                 <div class="col-sm 12">
+                    <p>UserName<p>
+                    <input type="text">
+                    <p>password</p>
+                    <input type="text">
+                    <p></p>
+                    <input type="submit" value="send" >
+                 </div>
+                </form>
 
+                <div class="col-sm 12">
+                    <input type="button" value="close" id="close" onclick="hideform('close');">
+                 </div>
+            </div>
+         </div>
+        </div>
+       
+</div>
 
 </body>
-
+<script type="text/javascript" src="../static/js/siginup.js" th:src="@{/js/siginup.js}"></script>
 <script type="text/javascript" src="../static/js/Editor.js" th:src="@{/js/Editor.js}"></script>
 <script type="text/javascript" src="../static/js/bootstrap.js" th:src="@{/js/jquery-linedtextarea.js}"></script>
 

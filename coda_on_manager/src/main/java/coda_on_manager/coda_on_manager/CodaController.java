@@ -6,15 +6,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
  
 @Controller 
 
-public class RootController {
+public class CodaController {
 
 
-@RequestMapping("/")
+@RequestMapping("/RootPage")
 public String RootPage() {
     return "RootPage";
 }
 
-@RequestMapping("/Result")
+@RequestMapping("/")
 public String Result() {
     return "Result_test";
 }
