@@ -81,10 +81,59 @@
        font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ';
 }
 
-#user_code_btn{
+#Create_btn{
+       padding: 5px;
        height: 60px;
-       width: 130px;
-       border-radius: 5px;
-       background-image: url("../img/code_btn.jpg");
-       background-size: contain;
+       width: 150px;
+       border-radius: 10px;
+       background-image: url("../img/CreateUser_btn.jpg");
+       background-size: cover;
+}
+
+#Sign_btn{
+       padding: 5px;
+       height: 60px;
+       width: 150px;
+       border-radius: 10px;
+       background-image: url("../img/Sign_btn.jpg");
+       background-size: cover;
+}
+
+
+#Registration{
+       width:50%;
+       margin:1.5em auto 0;
+       padding:10px 20px;
+       border:2px solid #aaa;
+       background:rgba(111, 213, 216, 0.8);
+       z-index:2;
+       position:fixed;
+       display: none;
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       -webkit-transform: translate(-50%, -50%);
+       -ms-transform: translate(-50%, -50%);
+
+ }     
+
+ #Registration-overlay{
+	z-index:1;
+	display:none;
+	width:100%;
+	height:120%;
+       background-color:rgba(0,0,0,0.75);
+       
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       -webkit-transform: translate(-50%, -50%);
+       -ms-transform: translate(-50%, -50%);
+}
+
+
+#Main_Header{
+       height: 10%;
 }

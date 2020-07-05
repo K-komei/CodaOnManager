@@ -18,10 +18,6 @@ public String RootPage() {
 public String SiginUp() {
     return "SiginUp";
 }
-@RequestMapping("/RegistrationUser")
-public String RegistrationUser() {
-    return "Registration_User";
-}
 
 
 }
