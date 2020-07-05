@@ -4,6 +4,9 @@
  * 
  */
 
+ html{
+       font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ';
+ }
 
  textarea:focus {
        outline: none;
@@ -43,7 +46,7 @@
        margin:1.5em auto 0;
        padding:10px 20px;
        border:2px solid #aaa;
-       background:#fff;
+       background:rgba(111, 213, 216, 0.8);
        z-index:2;
        position:fixed;
        display: none;
@@ -69,4 +72,19 @@
        transform: translate(-50%, -50%);
        -webkit-transform: translate(-50%, -50%);
        -ms-transform: translate(-50%, -50%);
+}
+#Registration_Page{
+       background-color: rgba(255,255,255,0.6);
+       background-image: url("../img/Registration_Back.jpg");
+       background-blend-mode:lighten;
+       background-size: contain;
+       font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ';
+}
+
+#user_code_btn{
+       height: 60px;
+       width: 130px;
+       border-radius: 5px;
+       background-image: url("../img/code_btn.jpg");
+       background-size: contain;
 }

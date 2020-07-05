@@ -9,14 +9,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class CodaController {
 
 
-@RequestMapping("/RootPage")
+@RequestMapping("/Main")
 public String RootPage() {
-    return "RootPage";
+    return "Main";
 }
 
 @RequestMapping("/")
-public String Result() {
-    return "Result_test";
+public String SiginUp() {
+    return "SiginUp";
+}
+@RequestMapping("/RegistrationUser")
+public String RegistrationUser() {
+    return "Registration_User";
 }
 
 

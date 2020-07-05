@@ -6,13 +6,14 @@
     <link th:href="@{/css/jquery-linedtextarea.css}" href="../static/css/jquery-linedtextarea.css" rel="stylesheet" type="text/css">
   
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   
     <title>SignUp -サインアップ-</title>
 </head>
 <body class = "h-100" style="background-color: rgba(48, 48, 50);">
 <div class ="container h-100" style="border: solid 1px whitesmoke; background-color:darkgrey; opacity:0.7">
     <div class ="row spacezero h-100" id = "Hello">
         <div class ="col-sm-12 spacezero" style="height: 60%;">
-            <img class ="spacezero"th:src="@{img/facebook_cover_photo_2.jpg}"width="100%"height="100%">
+            <img class ="spacezero"th:src="@{img/Sigin_Header.jpg}"width="100%"height="100%">
         </div>
         <div class ="col-sm-12 spacezero" style="height: 30%;">
             <h1>Write your Ideas...</h1>
@@ -23,26 +24,43 @@
     </div>      
         </div>
         <div class ="col-sm-12" style="text-align:center;height: 10%;">
-            <input type="button" value="Coding!" onclick="hideform('open');">
+            <input type="button" onclick="hideform('open');" id="user_code_btn">
         </div>
         </div>
     <div class ="row spacezero h-100" id = "Sign-overlay">
         <div class = "col-sm-12" id = "Sign">
-            <div class = row>
-                <form action ="/RootPage" method="post">
-                 <div class="col-sm 12">
+            <div class ="row">
+                <div class = "col-sm-12" style="text-align: left; border-bottom:solid 2px darkblue;margin-bottom:10px ;">                  
+                    <h1>SiginUpFrom</h1>
+                </div>
+                <div class ="col-sm-4">
+                    <img class ="spacezero" th:src="@{img/Sigin_Pop.jpg}" width="100%"height="100%">
+                </div>
+
+                <div class = "col-sm-4" style="text-align: left">
+                    <form action ="/Main" method="post">
                     <p>UserName<p>
-                    <input type="text">
-                    <p>password</p>
-                    <input type="text">
+                     <input type="text">
+                    <p>Password</p>
+                     <input type="text">
                     <p></p>
                     <input type="submit" value="send" >
-                 </div>
-                </form>
+                    </form>
+                </div>
 
-                <div class="col-sm 12">
+                <div class = "col-sm-4">
+                    <p>Create New User </p>
+                    <form action ="/RegistrationUser" method="post">
+                        <input type="submit" value="Registration">
+                    </form>
+                </div>
+
+                <div class = "col-sm-12" style="text-align: right;">                  
                     <input type="button" value="close" id="close" onclick="hideform('close');">
-                 </div>
+                </div>
+
+            </div>
+             </div>
             </div>
          </div>
         </div>
