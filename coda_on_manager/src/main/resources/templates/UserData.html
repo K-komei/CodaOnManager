@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class = "h-100"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link th:href="@{/css/origin.css}" href="../static/css/origin.css" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/bootstrap.css}" href="../static/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/jquery-linedtextarea.css}" href="../static/css/jquery-linedtextarea.css" rel="stylesheet" type="text/css">
+  
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   
+    <title>UserData -ユーザーデータ-</title>
+</head>
+<body class = "h-100" style="background-color: rgba(48, 48, 50);">
+  <h1>RegistrationUser</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>E-mail</th>
+        <th>SecretQuestion</th>
+      </tr>
+    </thead>
+    <tbody style="color: aliceblue;">
+      <tr th:each="user : ${users}" th:object="${user}">
+        <!-- ③ -->
+        <td th:text="*{Id}"></td>
+        <td th:text="*{Name}"></td>
+        <td th:text="*{Pass}"></td>
+        <td th:text="*{Mail}"></td>
+        <td th:text="*{Secret}"></td>
+        <!-- ④ -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+<script type="text/javascript" src="../static/js/siginup.js" th:src="@{/js/siginup.js}"></script>
+<script type="text/javascript" src="../static/js/Editor.js" th:src="@{/js/Editor.js}"></script>
+<script type="text/javascript" src="../static/js/bootstrap.js" th:src="@{/js/jquery-linedtextarea.js}"></script>
+
+</html>

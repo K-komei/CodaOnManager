@@ -82,21 +82,22 @@
         <img class ="spacezero" th:src="@{img/Sigin_Pop.jpg}" width="100%"height="100%">
         </div>
         <div class = "col-sm-4" style="text-align: left">
-        <form action ="/Main" method="post">
+            
+        <form action ="/UserData/Create" th:object ="${user}" method="post">   
          E-mail Address
-        <input type="text">
+        <input type="text" th:field ="*{Mail}">
         <p></p>
          UserName
-         <input type="text">
+         <input type="text" th:field ="*{Name}" >
          <p></p>
          Password
-         <input type="text">
+         <input type="text" th:field ="*{Pass}">
          <p></p>
          SecretQuestion<br>
          What name your first lover?
-         <input type="text">
+         <input type="text" th:field ="*{Secret}">
          <p></p>
-         <input type="submit" value="send" >
+         <input type="submit" value="send">
          </form>
          </div>
          <div class = "col-sm-12" style="text-align: right;">                  
