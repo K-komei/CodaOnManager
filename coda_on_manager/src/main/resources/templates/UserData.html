@@ -23,14 +23,15 @@
     </thead>
     <tbody style="color: aliceblue;">
       <tr th:each="user : ${users}" th:object="${user}">
-        <!-- ③ -->
         <td th:text="*{Id}"></td>
         <td th:text="*{Name}"></td>
         <td th:text="*{Pass}"></td>
         <td th:text="*{Mail}"></td>
         <td th:text="*{Secret}"></td>
-        <!-- ④ -->
-        </td>
+        <form action ="Delete" method="post">
+          <input type="hidden" name ="del_num" th:value="*{Id}"/>
+          <td><input type="submit" value= "削除" ></td>
+        </form>
       </tr>
     </tbody>
   </table>

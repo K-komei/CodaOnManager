@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html class = "h-100"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link th:href="@{/css/origin.css}" href="../static/css/origin.css" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/bootstrap.css}" href="../static/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/jquery-linedtextarea.css}" href="../static/css/jquery-linedtextarea.css" rel="stylesheet" type="text/css">  
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+    <title>Coda for Browser</title>
+</head>
+<body class = "h-100" style="background-color: rgba(48, 48, 50);">
+    <tbody>
+    <tr th:each="code : ${codes}" th:object="${code}">
+        <td th:text="*{Id}"></td>
+        <td th:text="*{Codename}"></td>
+        <td th:text="*{Codebody}"></td>
+    </tr>
+</tbody>
+
+</body>
+</html>

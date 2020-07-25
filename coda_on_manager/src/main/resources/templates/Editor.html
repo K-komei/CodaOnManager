@@ -12,15 +12,14 @@
     <div class = "container h-100" style="background-color: rgba(255,255,255,0.1);">
         <div class = "row">
             <div class ="col-md-12 h-25" id="Main_Header">
-                <img class ="spacezero" th:src="@{img/Main_Header.jpg}" >
+                <img class ="spacezero" th:src="@{/img/Main_Header.jpg}" >
             </div>
         </div>
             <div class = "row">
             <div class ="col-md-2 bg-secondary">
-                <input type="button" value="File" class = "w-100">
-            </div>
-            <div class ="col-md-2 bg-secondary">
-                <input type="button" value="Upload"class = "w-100">
+                <form action="Main/Filelist" method="get">
+                <input type="submit" value="File" class = "w-100">
+                </form>
             </div>
             <div class ="col-md-2 bg-secondary">
                 <input type="button" value="DownLoad" class = "w-100">
@@ -30,18 +29,21 @@
 
         </div>
 
-        <div class = "row">
-            <div class="col-md-12">
-            <textarea class="lined" rows="30" cols="20" id ="code_wirite"></textarea>
+        <div class = "row w-100">
+            <div class="col-md-12" style="width: 100%;">
+            <form action="Upload" th:object="${code}" method="post" >
+            <textarea class="lined" rows="30" cols="20" id ="code_wirite" th:field ="*{Codebody}"></textarea>
+            <input type="hidden" th:field ="*{Codename}">
+            <input type="submit" value="Upload" class = "w-25">
+        </from>
             </div>
+            <div class="col-md-12" style="text-align: right;">
+            <div>
         </div>
-        <div class = "row" style="color:aliceblue">
-            <div class="col-md-12">
-            </div>
+
 
         </div>
     
-    </div>
 </body>
 
 <script>

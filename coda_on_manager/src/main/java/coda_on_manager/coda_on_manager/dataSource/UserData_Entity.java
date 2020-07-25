@@ -1,8 +1,8 @@
 package coda_on_manager.coda_on_manager.dataSource;
 
-import java.sql.Date;
-
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 //ユーザーデータのエンティティクラス
@@ -10,15 +10,12 @@ import javax.persistence.Table;
 @Entity
 @Table(name="user_info")
 public class UserData_Entity {
-@Id
-private Integer ID;
 
-private String USER_NAME;
-private String MAIL;
-private String PASSWORD;
-private String SECRET_QUESTION;
-private Date CREATED;
-private Date MODIFIED;
+@Column(name="ID") @Id @GeneratedValue private Integer ID;
+@Column(name="USER_NAME") private String USER_NAME;
+@Column(name="MAIL") private String MAIL;
+@Column(name="PASSWORD") private String PASSWORD;
+@Column(name="SECRET_QUESTION") private String SECRET_QUESTION;
 
 //ここからget method
 public Integer getId(){
@@ -36,34 +33,23 @@ public String getPass(){
 public String getSecret(){
     return SECRET_QUESTION;
   }
-public Date getCreated(){
-   return CREATED;
-}
-public Date getModified(){
-    return MODIFIED;
-  }
 
   //ここからset method
 
-  public void setId(int id){
-    this.ID = id;
+  public void setId(int Id){
+    this.ID = Id;
   }
-  public void setName(String name){
-    this.USER_NAME = name;
+  public void setName(String Name){
+    this.USER_NAME = Name;
   }
-  public void setMail(String mail){
-    this.MAIL=mail;
+  public void setMail(String Mail){
+    this.MAIL=Mail;
     }
-  public void setPass(String pass){
-    this.PASSWORD=pass;
+  public void setPass(String Pass){
+    this.PASSWORD=Pass;
     }
-  public void setSecret(String secret){
-    this.SECRET_QUESTION=secret;
+  public void setSecret(String Secret){
+    this.SECRET_QUESTION=Secret;
     }
-  public void setCreated(Date created){
-    this.CREATED = created;
-  }
-  public void setModified(Date modified){
-    this.MODIFIED = modified;
-  }
+ 
 }
