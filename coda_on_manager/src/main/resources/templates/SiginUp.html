@@ -61,7 +61,7 @@
         　<img class ="spacezero" th:src="@{img/Sigin_Pop.jpg}" width="100%" >
         </div>
     <div class = "col-sm-4" style="text-align: left">
-        <form action ="Editor" method="post" th:object="${user}">
+        <form action ="Login" method="post" th:object="${user}">
          UserName
          <input type="text" th:field="*{Name}">
          <p></p>
