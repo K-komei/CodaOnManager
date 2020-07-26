@@ -17,7 +17,7 @@
         </div>
             <div class = "row">
             <div class ="col-md-2 bg-secondary">
-                <form action="Main/Filelist" method="get">
+                <form action="Filelist" method="get">
                 <input type="submit" value="File" class = "w-100">
                 </form>
             </div>
@@ -32,8 +32,8 @@
         <div class = "row w-100">
             <div class="col-md-12" style="width: 100%;">
             <form action="Upload" th:object="${code}" method="post" >
+            FileName:<input type="text" th:field ="*{Codename}" class ="w-25">
             <textarea class="lined" rows="30" cols="20" id ="code_wirite" th:field ="*{Codebody}"></textarea>
-            <input type="hidden" th:field ="*{Codename}">
             <input type="submit" value="Upload" class = "w-25">
         </from>
             </div>
