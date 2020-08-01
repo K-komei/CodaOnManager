@@ -18,35 +18,25 @@
     </div>
 </div>
 
-<form action ="Editor" method="get">
-    <input type="submit" value="作成">
-</from>
+<form action ="Editor" method="get" >
+    <input type="submit" value="NewFile">
+</form>
 
 <div class ="row">
 <div class ="col-sm-12">    
-    <tbody>
-        
-    <tr th:each="code : ${codes}" th:object="${code}">
-        <td th:field="*{Id}"></td>
-        <td th:field="*{Codename}"></td>
-        <form action="Editor" method="POST" th:object="${code}">
+<table>
+    <tr th:each="code : ${codes}">
+        <form action="Editor" method="post" th:object="${code}">
+        <td th:text="*{Codename}"></td>
         <td>
-            <input type = "hidden" th:field ="*{Id}">
-            <input type = "submit" value="Edit">
+        <input type ="hidden" th:value = "*{id}" name="codenum">
+        <input type ="submit" value="Edit">
         </td>
-        </form>
-
-        <form action="code_DELETE" method="POST" th:object="${code}">
-        <td>
-            <input type="hidden" th:field="*{Id}">
-            <input type = "submit" value="Delete">
-        </td>
-        </form>
-    
-
-
+        </form> 
     </tr>
-</tbody>
+    
+</table>
+
 </div>
 </div>
 

@@ -31,13 +31,20 @@
 
         <div class = "row w-100">
             <div class="col-md-12" style="width: 100%;">
-            <form action="Upload" th:object="${code}" method="post" >
-            FileName:<input type="text" th:field ="*{Codename}" class ="w-25">
+            <form id = "codeArea" th:object="${code}">
+            <input type ="hidden" th:field="*{id}">
+            <input type ="hidden" th:field="*{Create_user_id}">
+            FileName:
+            <input type="text" th:field ="*{Codename}" class ="w-25">
             <textarea class="lined" rows="30" cols="20" id ="code_wirite" th:field ="*{Codebody}"></textarea>
-            <input type="submit" value="Upload" class = "w-25">
-        </from>
+            </form>
             </div>
+
             <div class="col-md-12" style="text-align: right;">
+            <input type="submit" form="codeArea" value="Upload" formaction="Upload" formmethod="post" class = "w-25" >
+          <!--  <input type="submit" form="codeArea" value="OverWrite" formaction="OverWrite" formmethod="post" class = "w-25"> -->
+            </form>    
+
             <div>
         </div>
 

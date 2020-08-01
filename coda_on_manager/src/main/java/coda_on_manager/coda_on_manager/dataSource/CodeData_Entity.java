@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Table(name="codedata")
 public class CodeData_Entity {
 
-@Column(name="ID") @Id @GeneratedValue private Integer ID;
+@Column(name="ID") @Id  @GeneratedValue private Integer ID;
 @Column(name="CODENAME") private String CODENAME;
 @Column(name="CODEBODY") private String CODEBODY;
 @Column(name="CREATE_USER_ID") private int CREATE_USER_ID;
