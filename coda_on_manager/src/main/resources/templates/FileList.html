@@ -31,7 +31,7 @@
 
 <div class ="row h-75">
 <div class ="col-sm-12 h-100"> 
-<table class ="w-100 h-10"  id ="fileTable">    
+<table class ="w-100 h-10"  id ="fileTable_head">    
     <tr class ="table_head">
         <td class = "w-75 td_header1">FileList</td>
         <td class = "w-25 td_header2"></td>
@@ -39,11 +39,11 @@
 </table>
 
 <table class ="w-100 h-75"  id ="fileTable">
-    <tr class ="h-10" th:each="code : ${codes}" >
+    <tr class ="h-10 tr_data" th:each="code : ${codes}" style="max-height: content 10%;">
         <form th:object="${code}">
-        <td class = "w-75 td_data" th:text="*{Codename}"></td>
+        <td class = "td_data_title" th:text="*{Codename}"></td>
         <input type ="hidden" th:value = "*{id}" name="codenum">
-        <td class = "w-25 td_data">
+        <td class = "td_data_btn">
         <input type ="submit" class="Codebtn w-40" value="Edit" formaction="Editor" formmethod="post" >
         <input type ="submit" class="Codebtn w-40" value="Delete" formaction="Delete" formmethod="post" >
         </form>

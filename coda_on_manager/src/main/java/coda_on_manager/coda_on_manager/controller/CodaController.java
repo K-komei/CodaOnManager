@@ -120,7 +120,7 @@ public String Upload(@ModelAttribute CodeData_Entity code,HttpSession session,Mo
  //作成者にUserIdをセット
  code.setCreate_user_id(user.getId());
 
- if(code.getCodename().length() > 1){
+ if(code.getCodename().length() > 0){
         codeDataRepo.save(code);
         return "redirect:Editor";       
  }else{

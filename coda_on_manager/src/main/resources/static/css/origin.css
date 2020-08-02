@@ -142,18 +142,31 @@
 .w-40{
 width:40%;
 }
+.tr_data{
+width: 100%;
+}
 
-.td_data{
+.td_data_title{
        padding-left: 3%;
        padding-right:0px ;
        padding-top:0px ;
        padding-bottom:0px ;
-
        margin: 0;    
        border: solid 1px rgba(95, 80, 150,0.5);
-       width: 10%;
+       width: 80%;
+       min-width: 400px;
 }
 
+.td_data_btn{
+       padding-left: 3%;
+       padding-right:0px ;
+       padding-top:0px ;
+       padding-bottom:0px ;
+       margin: 0;    
+       border: solid 1px rgba(95, 80, 150,0.5);
+       width: 20%;
+       min-width: 400px;
+}
 .Codebtn{
        background-color: azure;
        margin-left: 3%;
@@ -196,4 +209,10 @@ width:40%;
 
 .container_back{
        background-color: rgba(255,255,255,0.1);
+}
+
+#fileTable{
+       overflow-y:scroll ;
+       display: block;
+       width: 100%;
 }
