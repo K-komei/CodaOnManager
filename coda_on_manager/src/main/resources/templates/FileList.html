@@ -9,35 +9,53 @@
     <title>Coda for Browser</title>
 </head>
 <body class = "h-100" style="background-color: rgba(48, 48, 50);">
+<div class = "container h-100 container_back">
+
 <div class = "row" th:object="${user}">
-    <div class ="col-sm-6">
-        <h1 th:text="*{Id}"></h1>
+    <div class ="col-sm-12" id="Main_Header">
+        <img class ="spacezero" th:src="@{/img/Main_Header.jpg}" >
     </div>
-    <div class ="col-sm-6">
-        <h1 th:text = "*{Name}"></h1>
-    </div>
+        <div class ="col-sm-3 bg-secondary">
+            <form action ="Editor" method="get" >
+                <input type="submit" value="NewFile" class ="Codebtn w-100">
+            </form>        
+        </div>
+        <div class ="col-sm-3 bg-secondary">
+        </div>
+        <div class ="col-sm-3 bg-secondary">
+        </div>
+        <div class ="col-sm-3 bg-secondary">
+        </div>
+
 </div>
 
-<form action ="Editor" method="get" >
-    <input type="submit" value="NewFile">
-</form>
+<div class ="row h-75">
+<div class ="col-sm-12 h-100"> 
+<table class ="w-100 h-10"  id ="fileTable">    
+    <tr class ="table_head">
+        <td class = "w-75 td_header1">FileList</td>
+        <td class = "w-25 td_header2"></td>
+    </tr>   
+</table>
 
-<div class ="row">
-<div class ="col-sm-12">    
-<table>
-    <tr th:each="code : ${codes}">
-        <form action="Editor" method="post" th:object="${code}">
-        <td th:text="*{Codename}"></td>
-        <td>
+<table class ="w-100 h-75"  id ="fileTable">
+    <tr class ="h-10" th:each="code : ${codes}" >
+        <form th:object="${code}">
+        <td class = "w-75 td_data" th:text="*{Codename}"></td>
         <input type ="hidden" th:value = "*{id}" name="codenum">
-        <input type ="submit" value="Edit">
+        <td class = "w-25 td_data">
+        <input type ="submit" class="Codebtn w-40" value="Edit" formaction="Editor" formmethod="post" >
+        <input type ="submit" class="Codebtn w-40" value="Delete" formaction="Delete" formmethod="post" >
+        </form>
         </td>
-        </form> 
+        
     </tr>
     
 </table>
+</div>
 
 </div>
+
 </div>
 
 </body>

@@ -9,40 +9,44 @@
     <title>Coda for Browser</title>
 </head>
 <body class = "h-100" style="background-color: rgba(48, 48, 50);">
-    <div class = "container h-100" style="background-color: rgba(255,255,255,0.1);">
+    <div class = "container h-100 container_back">
         <div class = "row">
-            <div class ="col-md-12 h-25" id="Main_Header">
+            <div class ="col-sm-12 h-25" id="Main_Header">
                 <img class ="spacezero" th:src="@{/img/Main_Header.jpg}" >
             </div>
         </div>
             <div class = "row">
-            <div class ="col-md-2 bg-secondary">
+            <div class ="col-sm-3 bg-secondary">
                 <form action="Filelist" method="get">
-                <input type="submit" value="File" class = "w-100">
+                <input type="submit" value="FileList" class = "Codebtn w-100">
                 </form>
             </div>
-            <div class ="col-md-2 bg-secondary">
-                <input type="button" value="DownLoad" class = "w-100">
-            </div>
-            <div class ="col-md-6 bg-secondary">
+            
+            <div class ="col-sm-3 bg-secondary">
             </div>   
+
+            <div class ="col-sm-3 bg-secondary">
+            </div>   
+
+            <div class ="col-sm-3 bg-secondary">
+            </div>   
+
 
         </div>
 
         <div class = "row w-100">
-            <div class="col-md-12" style="width: 100%;">
-            <form id = "codeArea" th:object="${code}">
+            <div class="col-sm-12">
+            <form id = "codeArea"th:object="${code}">
             <input type ="hidden" th:field="*{id}">
             <input type ="hidden" th:field="*{Create_user_id}">
             FileName:
-            <input type="text" th:field ="*{Codename}" class ="w-25">
+            <input type="text" class="h-10 w-25" th:field ="*{Codename}">
             <textarea class="lined" rows="30" cols="20" id ="code_wirite" th:field ="*{Codebody}"></textarea>
             </form>
             </div>
 
-            <div class="col-md-12" style="text-align: right;">
-            <input type="submit" form="codeArea" value="Upload" formaction="Upload" formmethod="post" class = "w-25" >
-          <!--  <input type="submit" form="codeArea" value="OverWrite" formaction="OverWrite" formmethod="post" class = "w-25"> -->
+            <div class="col-sm-12" style="text-align: right;">
+            <input type="submit" form="codeArea" value="Upload" formaction="Upload" formmethod="post" class = "Codebtn w-25" >
             </form>    
 
             <div>
